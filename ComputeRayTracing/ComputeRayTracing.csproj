@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Content\ComputeRayTracing\Shaders\HLSL\CS.fx" />
+    <None Remove="Content\ComputeRayTracing\Shaders\HLSL\HLSL.fx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Content\ComputeRayTracing\Shaders\HLSL\CS.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\ComputeRayTracing\Shaders\HLSL\HLSL.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WaveEngine.Common" Version="3.0.0.1974-preview" />
+    <PackageReference Include="WaveEngine.DirectX11" Version="3.0.0.1974-preview" />
+    <PackageReference Include="WaveEngine.Forms" Version="3.0.0.1974-preview" />
+    <PackageReference Include="WaveEngine.Mathematics" Version="3.0.0.1974-preview" />
+  </ItemGroup>
+
+</Project>
